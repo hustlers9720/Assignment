@@ -5,7 +5,7 @@ const App = () => {
   const [message, setMessage] = useState("");
   const [coupons, setCoupons] = useState([]);
 
-  const baseUrl = "http://localhost:5000"
+  const baseUrl = "https://assignment-i5vo.vercel.app/"
 
   useEffect(() => {
     fetch(`${baseUrl}/all-coupon`)
