@@ -5,10 +5,12 @@ const App = () => {
   const [message, setMessage] = useState("");
   const [coupons, setCoupons] = useState([]);
 
-  const baseUrl = "https://assignment-i5vo.vercel.app"
+  const baseUrl = "http://localhost:5000"; // Use HTTP, not HTTPS
+
+
 
   useEffect(() => {
-    fetch(`${baseUrl}all-coupon`)
+    fetch(`${baseUrl}/all-coupon`)
       .then(response => response.json())
       .then(data => setCoupons(data))
       .catch(error => console.error("Error fetching coupons:", error));
@@ -16,7 +18,7 @@ const App = () => {
 
   const claimCoupon = async () => {
     try {
-      const res = await fetch(`${baseUrl}claim-coupon`);
+      const res = await fetch(`${baseUrl}/claim-coupon`);
       const data = await res.json();
       setMessage(data.message);
 
