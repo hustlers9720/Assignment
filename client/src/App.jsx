@@ -5,7 +5,8 @@ const App = () => {
   const [message, setMessage] = useState("");
   const [coupons, setCoupons] = useState([]);
 
-  const baseUrl = "https://assignment-i5vo.vercel.app"; // Use HTTP, not HTTPS
+  // const baseUrl = "https://assignment-i5vo.vercel.app"; // Use HTTP, not HTTPS
+  const baseUrl = "http://localhost:5000"; // Use HTTP, not HTTPS
 
 
 
