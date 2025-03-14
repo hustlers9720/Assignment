@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 let isConnected = false; // Track connection state
-
+require('dotenv').config();
 const connectDB = async () => {
     try {
         if (mongoose.connection.readyState === 1) {
